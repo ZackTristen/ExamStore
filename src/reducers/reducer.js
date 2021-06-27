@@ -1,7 +1,10 @@
 
 
 const initialState = {
-    games: []
+    games: [],
+    // loading: null,
+    // errorMessage: null,
+    // filteringGames: null
 }
 
 const reducer = (state = initialState, action) => {
@@ -9,7 +12,7 @@ const reducer = (state = initialState, action) => {
     switch (action.type) {
         case 'GAMES_LOADED':
             return {
-                games: action.payload
+                games: action.payload,
             }
         default:
             return state;

@@ -10,6 +10,8 @@ class ServiceGame {
     return  await res.json()
    }
 
+   
+
 }
 
 export default ServiceGame;
