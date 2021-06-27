@@ -3,14 +3,12 @@
 class ServiceGame {
 
 
-   getResource = async (url) => {
+    getResource = async (url) => {
+        const res = await fetch(url)
+        return await res.json()
+    }
 
-    const res = await fetch(url)
-    
-    return  await res.json()
-   }
 
-   
 
 }
 
