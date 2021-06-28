@@ -5,15 +5,17 @@ import Header from '../header/header';
 import Cart from '../cart/cart';
 import withService from '../hoc/withService'
 
+import ServiceGame from '../../services/service';
 
 
 
+const App = () => {
+  
+  const service = new ServiceGame()
+  const data = service.getResource();
+  console.log(data.games[1])
 
-const App = ({ serviceGame }) => {
-  const data = serviceGame.getResource()
-  console.log(data)
-  return (
-    
+  return(
     <React.Fragment>
       <Header/>
       <ListItem/>
@@ -23,4 +25,4 @@ const App = ({ serviceGame }) => {
   )
 }
 
-export default withService()(App);
+export default withService(App);

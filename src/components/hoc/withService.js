@@ -2,7 +2,7 @@ import React from 'react';
 import { StoreServiceConsumer } from '../store-service-context/store-service-context';
 
 
-const withServiceGame = () => (Wrapped) => {
+const withServiceGame = (Wrapped) => {
 
     return (props) => {
         return (
