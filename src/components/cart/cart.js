@@ -3,14 +3,14 @@ import CartItem from '../cart-item/cart-item'
 
 class Cart extends Component {
 
-
-    render() {
     
+    render() {
+        
         return (
           <div>
               <span>Корзина покупок</span>
               <ul>
-                  <CartItem/>
+                  <CartItem />
                   <CartItem/>
                   <CartItem/>
                   <CartItem/>

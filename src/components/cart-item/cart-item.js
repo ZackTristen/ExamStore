@@ -4,7 +4,7 @@ const CartItem = () => {
     return (
         <React.Fragment>
             <li>
-                Игра
+               Игра
                 <button type='submit'>+</button>
                 <button type='submit'>-</button>
                 <button type='submit'>Удалить все</button>
