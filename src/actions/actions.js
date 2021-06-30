@@ -3,26 +3,35 @@
 const gamesLoaded = (games) => {
 
     return {
-        type: 'GAMES_LOADED',
+        type: 'FETCH_GAMES_LOADED',
         payload: games
     }
 }
 
 const gamesRequested = () => {
     return {
-        type: 'GAMES_REQUESTED'
+        type: 'FETCH_GAMES_REQUESTED'
     }
 }
 
 const hasError = (error) => {
     return {
-        type: 'HAS_ERROR',
+        type: 'FETCH_HAS_ERROR',
         payload: error
     }
 }
 
+const fetchGames = (dispatch, serviceGame) => () => {
+        dispatch(gamesRequested())
+        serviceGame.getResource()
+            .then((data) => {
+                dispatch(gamesLoaded(data))
+            }).catch(error => {
+                dispatch(hasError(error))
+            })
+
+} 
+
 export { 
-    gamesLoaded,
-    gamesRequested,
-    hasError
+    fetchGames
 }

@@ -10,19 +10,19 @@ const initialState = {
 const reducer = (state = initialState, action) => {
 
     switch (action.type) {
-        case 'GAMES_REQUESTED':
+        case 'FETCH_GAMES_REQUESTED':
             return {
                 games: [],
                 loading: true,
                 errorMessage: null
             }
-        case 'GAMES_LOADED':
+        case 'FETCH_GAMES_LOADED':
             return {
                 games: action.payload,
                 loading: false,
                 errorMessage: null
             }
-        case 'HAS_ERROR': 
+        case 'FETCH_HAS_ERROR': 
         return {
             games: [],
             loading: false,

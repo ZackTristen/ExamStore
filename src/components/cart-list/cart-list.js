@@ -11,7 +11,7 @@ class CartList extends Component {
         return (
             <div className="shoping-cart">
              <table>
-             <caption>Корзин покупок</caption>
+             <caption><h3>Корзина покупок</h3></caption>
                  <thead>
                      <tr>
                      <th>#</th>
