@@ -1,28 +1,28 @@
 import React from 'react';
-import ListItem from '../list-items/list-item';
-import Footer from '../footer/footer';
 import Header from '../header/header';
-import Cart from '../cart/cart';
-import withService from '../hoc/withService'
-
-import ServiceGame from '../../services/service';
+import { HomePage, CartPage } from '../pages/index'
+import { Route, Switch } from 'react-router-dom'
+import Footer from '../footer/footer';
 
 
 
 const App = () => {
-  
-  const service = new ServiceGame()
-  const data = service.getResource();
-  console.log(data.games[1])
 
-  return(
+
+  return (
     <React.Fragment>
       <Header/>
-      <ListItem/>
-      <Cart />
+      <Switch>
+        <Route path="/"
+        component={HomePage}
+        exact />
+        <Route path="/cart"
+        component = {CartPage}
+        exact />
+      </Switch>
       <Footer/>
     </React.Fragment>
   )
 }
 
-export default withService(App);
+export default App;

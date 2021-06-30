@@ -8,6 +8,21 @@ const gamesLoaded = (games) => {
     }
 }
 
+const gamesRequested = () => {
+    return {
+        type: 'GAMES_REQUESTED'
+    }
+}
+
+const hasError = (error) => {
+    return {
+        type: 'HAS_ERROR',
+        payload: error
+    }
+}
+
 export { 
-    gamesLoaded
+    gamesLoaded,
+    gamesRequested,
+    hasError
 }
