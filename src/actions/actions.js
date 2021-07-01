@@ -27,6 +27,21 @@ const gameAddedToCart = (gameId) => {
     }
 }
 
+const gameRemoveFromCart = (id) => {
+    return {
+        type: 'GAME_REMOVED_FROM_CART',
+        payload: id
+        
+    }
+}
+
+const allGamesRemoveFromCart = (id) => {
+    return {
+        type: 'ALL_GAMES_REMOVED_FROM_CART',
+        payload: id
+    }
+}
+
 const fetchGames = (dispatch, serviceGame) => () => {
         dispatch(gamesRequested())
         serviceGame.getResource()
@@ -40,5 +55,7 @@ const fetchGames = (dispatch, serviceGame) => () => {
 
 export { 
     fetchGames,
-    gameAddedToCart
+    gameAddedToCart,
+    gameRemoveFromCart,
+    allGamesRemoveFromCart
 }

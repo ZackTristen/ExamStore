@@ -2,7 +2,7 @@ import React from 'react';
 import GameItem from '../game-item/game-item'
 import { connect } from 'react-redux';
 import withService from '../hoc/withService';
-import { fetchGames, gameAddedToCart } from '../../actions/actions'
+import { fetchGames, gameAddedToCart} from '../../actions/actions'
 // import { bindActionCreators } from 'redux';
 import './game-list-item.css'
 import Spinner from '../spinner/spinner'
@@ -18,7 +18,7 @@ class GameListItemContainer extends React.Component {
     }
     
     render() {
-        const { games, loading, error, onAddedToCart } = this.props
+        const { games, loading, error, onAddedToCart, } = this.props
 
         if (loading) {
             return <Spinner />
@@ -28,7 +28,9 @@ class GameListItemContainer extends React.Component {
             return <ErrorIndicator/>
         }
          
-        return <GameList games={games} onAddedToCart={onAddedToCart}/>
+        return <GameList games={games}
+         onAddedToCart={onAddedToCart}
+         />
     }
 }
 
@@ -40,8 +42,9 @@ return (
                         return (
                             <GameItem 
                             key={item.id} game={item} 
-                            onAddedToCart={() => onAddedToCart(item.id)} />)
-
+                            onAddedToCart={() => onAddedToCart(item.id)}
+                            />)
+                            
                     })
                 }
             </div>
@@ -49,11 +52,11 @@ return (
 }
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({gamesList: { games, loading, error}}) => {
     return {
-        games: state.games,
-        loading: state.loading,
-        error: state.errorMessage
+        games,
+        loading,
+        error
     }
 }
 

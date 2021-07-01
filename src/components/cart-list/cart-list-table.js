@@ -2,7 +2,7 @@ import React from 'react';
 // import CartItem from '../cart-item/cart-item'
 import './cart-list-table.css'
 import { connect } from 'react-redux'
-
+import { gameRemoveFromCart, allGamesRemoveFromCart, gameAddedToCart} from '../../actions/actions'
 
 const CartListTable = ({ items, total, onIncrease, onDecrease, onDelete }) => {
 
@@ -50,24 +50,18 @@ const CartListTable = ({ items, total, onIncrease, onDecrease, onDelete }) => {
 }
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({shopingCart : { cartItems }}) => {
     return {
-        items: state.cartItems
+        items: cartItems
     };
 
 }
  
-const mapDispatchToProps = () => {
-    return {
-        onIncrease: (id) => {
-            console.log('increase on')
-        },
-        onDecrease: (id) => {
-            console.log('Decrease on')
-        },
-        onDelete: (id) => {
-            console.log('Delete on')
-        }
-    }
+const mapDispatchToProps = {
+    
+        onIncrease: gameAddedToCart,
+        onDecrease: gameRemoveFromCart,
+        onDelete: allGamesRemoveFromCart,
+    
 }
 export default connect(mapStateToProps, mapDispatchToProps)(CartListTable);
