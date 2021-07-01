@@ -2,7 +2,7 @@ import React from 'react';
 import GameItem from '../game-item/game-item'
 import { connect } from 'react-redux';
 import withService from '../hoc/withService';
-import { fetchGames } from '../../actions/actions'
+import { fetchGames, gameAddedToCart } from '../../actions/actions'
 // import { bindActionCreators } from 'redux';
 import './game-list-item.css'
 import Spinner from '../spinner/spinner'
@@ -16,9 +16,9 @@ class GameListItemContainer extends React.Component {
         const {fetchingGames} = this.props
         fetchingGames()
     }
-
+    
     render() {
-        const { games, loading, error } = this.props
+        const { games, loading, error, onAddedToCart } = this.props
 
         if (loading) {
             return <Spinner />
@@ -28,17 +28,19 @@ class GameListItemContainer extends React.Component {
             return <ErrorIndicator/>
         }
          
-        return <GameList games={games}/>
+        return <GameList games={games} onAddedToCart={onAddedToCart}/>
     }
 }
 
-const GameList = ({games}) => {
+const GameList = ({games, onAddedToCart}) => {
 return (
     <div className="game-list">
                 {
                     games.map((item) => {
                         return (
-                            <GameItem key={item.id} game={item} />)
+                            <GameItem 
+                            key={item.id} game={item} 
+                            onAddedToCart={() => onAddedToCart(item.id)} />)
 
                     })
                 }
@@ -59,7 +61,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch, {serviceGame}) => {
    return {
-    fetchingGames: fetchGames(dispatch, serviceGame)
+    fetchingGames: fetchGames(dispatch, serviceGame),
+    onAddedToCart: (gameId) =>  dispatch(gameAddedToCart(gameId))
 }
 }
 

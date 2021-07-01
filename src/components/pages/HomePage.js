@@ -1,13 +1,13 @@
 import React from 'react';
 import GameListItem from '../game-list-item/game-list-item';
-import CartList from '../cart-list/cart-list';
+import CartListTable from '../cart-list/cart-list-table';
 
 const HomePage = () => {
 
     return(
         <div>
 <GameListItem />
-<CartList/>
+<CartListTable/>
         </div>
         )
 }

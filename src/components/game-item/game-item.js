@@ -2,9 +2,9 @@ import React from 'react';
 import picture from '../../picture/Screenshot_3.jpg'
 import './game-item.css'
 
-const GameItem = (props) => {
+const GameItem = ({game, onAddedToCart}) => {
 
-    const { name, price, sinopsis, studio } = props.game;
+    const { name, price, sinopsis, studio } = game;
 
     return (
         <div className="game-item">
@@ -15,7 +15,7 @@ const GameItem = (props) => {
             <h3> Разработчик {studio}</h3>
             
                 <h2>{price}</h2>
-                <button>Добавить в корзину</button>
+                <button onClick={onAddedToCart}>Добавить в корзину</button>
 
 
             </div>

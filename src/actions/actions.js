@@ -20,6 +20,12 @@ const hasError = (error) => {
         payload: error
     }
 }
+const gameAddedToCart = (gameId) => {
+    return {
+        type: 'GAME_ADDED_TO_CART',
+        payload: gameId
+    }
+}
 
 const fetchGames = (dispatch, serviceGame) => () => {
         dispatch(gamesRequested())
@@ -33,5 +39,6 @@ const fetchGames = (dispatch, serviceGame) => () => {
 } 
 
 export { 
-    fetchGames
+    fetchGames,
+    gameAddedToCart
 }
