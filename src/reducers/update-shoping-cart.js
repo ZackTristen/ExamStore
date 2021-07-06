@@ -1,5 +1,5 @@
 const updateShopingCart = (state, action) => {
-
+    
     if (state === undefined) {
         return {
             cartItems: [],
@@ -27,7 +27,7 @@ const updateShopingCart = (state, action) => {
 }
 
 const updateCartItems = (cartItems, item, idx) => {
-
+    
     if (item.count === 0) {
         return [
             ...cartItems.slice(0, idx),
@@ -71,16 +71,25 @@ const updateCartItem = (item, game, quantity) => {
     return newGame;
 }
 
-const updateOrder = (state, gameId, quantity) => {
+const updateTotal = (cartItems) => {
+   let result = 0;
+   cartItems.forEach(item => {
+     return  result += item.price;
+   })
+   return result;
+}
 
+const updateOrder = (state, gameId, quantity) => {
+   
+    
     const { gamesList: { games }, shopingCart: { cartItems } } = state;
     const game = games.find((item) => item.id === gameId)
     const idx = cartItems.findIndex(item => item.id === gameId)
     const item = cartItems[idx]
-
     const newGame = updateCartItem(item, game, quantity)
+    
     return {
-        orderTotal: 0,
+        orderTotal: updateTotal(updateCartItems(cartItems, newGame, idx)),
         cartItems: updateCartItems(cartItems, newGame, idx)
     }
 }

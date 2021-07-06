@@ -50,9 +50,10 @@ const CartListTable = ({ items, total, onIncrease, onDecrease, onDelete }) => {
 }
 
 
-const mapStateToProps = ({shopingCart : { cartItems }}) => {
+const mapStateToProps = ({ shopingCart : { cartItems, orderTotal }}) => {
     return {
-        items: cartItems
+        items: cartItems,
+        total: orderTotal
     };
 
 }
