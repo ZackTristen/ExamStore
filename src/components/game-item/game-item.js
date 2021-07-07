@@ -4,18 +4,18 @@ import './game-item.css'
 
 const GameItem = ({game, onAddedToCart}) => {
 
-    const { name, price, sinopsis, studio } = game;
+    const { id, name, price, sinopsis, studio } = game;
 
     return (
         <div className="game-item">
 
-            <h3>{name}</h3>
-            <img src={picture} alt={name} />
-            <span>{sinopsis}</span>
-            <h3> Разработчик {studio}</h3>
+            <h3 className='game-title'>{name}</h3>
+            <img className={`store-pic-${id} picture`} src={picture} alt={name} />
+            <span className='sinopsis'>{sinopsis}</span>
+            <span className='studio'> Разработчик {studio}</span>
             
-                <h2>{price}</h2>
-                <button onClick={onAddedToCart}>Добавить в корзину</button>
+                <span classNam='price'>Цена {price}$</span>
+                <button className='add-to-cart' onClick={onAddedToCart}>Добавить в корзину</button>
 
 
             </div>

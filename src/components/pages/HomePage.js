@@ -5,10 +5,10 @@ import CartListTable from '../cart-list/cart-list-table';
 const HomePage = () => {
 
     return(
-        <div>
+        <>
 <GameListItem />
 <CartListTable/>
-        </div>
+        </>
         )
 }
 

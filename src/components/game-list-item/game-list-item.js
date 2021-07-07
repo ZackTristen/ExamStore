@@ -36,7 +36,7 @@ class GameListItemContainer extends React.Component {
 
 const GameList = ({games, onAddedToCart}) => {
 return (
-    <div className="game-list">
+    <div className="game-list-item">
                 {
                     games.map((item) => {
                         return (

@@ -1,5 +1,4 @@
 import React from 'react';
-// import CartItem from '../cart-item/cart-item'
 import './cart-list-table.css'
 import { connect } from 'react-redux'
 import { gameRemoveFromCart, allGamesRemoveFromCart, gameAddedToCart} from '../../actions/actions'

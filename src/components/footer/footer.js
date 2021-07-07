@@ -5,9 +5,9 @@ const Footer = () => {
     return (
         <div>
             Store exam
-            <h4>Все права защищены</h4>
-            <h5>+7 902 235 42 16</h5>
-            <h6>email FOREXAMPLE@MAIL.COM</h6>
+            <span>Все права защищены</span>
+            <span>+7 902 235 42 16</span>
+            <span>email FOREXAMPLE@MAIL.COM</span>
         </div>
     )
 
