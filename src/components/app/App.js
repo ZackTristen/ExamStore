@@ -3,7 +3,7 @@ import Header from '../header/header';
 import { HomePage, CartPage } from '../pages/index'
 import { Route, Switch } from 'react-router-dom'
 import Footer from '../footer/footer';
-
+import './App.css'
 
 
 const App = () => {

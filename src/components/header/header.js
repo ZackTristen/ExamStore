@@ -5,8 +5,8 @@ const Header = () => {
 
     return (
         <div className='header'>
-            <span>Store Exam</span>
-           <span> Здесь вы можете выбрать игру на свой вкус </span>
+            <span className='title'>Store Exam</span>
+           <span className='description'> Здесь вы можете выбрать игру на свой вкус </span>
         </div>
     )
 

@@ -1,26 +1,57 @@
 .game-item {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
     width: 300px;
     padding: 15px;
     margin: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 15px;
-    box-shadow: 0px 10px 20px 3px rgba(190, 152, 152, 0.582);
+    box-shadow: 0px 10px 20px 3px rgba(128, 92, 92, 0.582);
     border-radius: 10px;
-    
+    justify-content: space-between;
+    background-image: linear-gradient(110deg, rgba(236, 220, 220, 0.233), rgba(241, 247, 186, 0.322) );
+}
+.game-item:hover {
+    transform: scale(1.05);
+    transition-duration: 500ms;
+}
+
+.sinopsis, .game-title, .price, .studio, .picture {
+    padding: 10px;
 }
 
 .sinopsis {
-    padding: 30px;
+    padding: 20px;
 }
-
 .picture {
-    width: 100px;
-    height: 150px;
-   
+    width: 170px;
+    height: 220px;
+    align-self: center;
 }
 
 
+.add-to-cart {
+    background-image: linear-gradient(50deg, rgba(153, 94, 221, 0.575), rgba(233, 144, 72, 0.514));
+    border: none;
+    outline: none;
+    box-shadow: 0px 5px 5px 0px rgba(184, 95, 37, 0.192);
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(65, 37, 37);
+    font-size: 15px;
+    
+}
+
+.add-to-cart:hover {
+    transform: scale(1.05);
+    transition-duration: 300ms;
+    box-shadow: 5px 10px 5px 0px rgba(184, 95, 37, 0.192);
+}
+
+.add-to-cart:active {
+    transition-duration: 200ms;
+    border: 5px solid rgba(71, 96, 238, 0.685);
+}
