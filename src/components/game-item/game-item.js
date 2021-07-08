@@ -14,7 +14,7 @@ const GameItem = ({game, onAddedToCart}) => {
             <span className='sinopsis'>{sinopsis}</span>
             <span className='studio'> Разработчик {studio}</span>
             
-                <span classNam='price'>Цена {price}$</span>
+                <span className='price'>Цена {price}$</span>
                 <button className='add-to-cart' onClick={onAddedToCart}>Добавить в корзину</button>
 
 

@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { gameRemoveFromCart, allGamesRemoveFromCart, gameAddedToCart} from '../../actions/actions'
 
 const CartListTable = ({ items, total, onIncrease, onDecrease, onDelete }) => {
-
+   
     const renderRow = (item, idx) => {
         const { id, name, price, count } = item;
         return (
@@ -17,6 +17,7 @@ const CartListTable = ({ items, total, onIncrease, onDecrease, onDelete }) => {
                     <button  className='add-button' onClick={() => onIncrease(id)}>+</button>
                     <button className='delete-button' onClick={() => onDecrease(id)}>-</button>
                     <button className='all-delete-button' onClick={() => onDelete(id)}>удалить все</button>
+                    
                 </td>
             </tr>
         )
@@ -24,10 +25,12 @@ const CartListTable = ({ items, total, onIncrease, onDecrease, onDelete }) => {
 
     return (
         <div className="shoping-cart">
+            
             <table>
                 <caption><h3 className ='title-cart'>Корзина покупок</h3></caption>
                 <thead>
                     <tr>
+                       
                         <th>#</th>
                         <th>Название</th>
                         <th>Цена</th>
@@ -62,6 +65,7 @@ const mapDispatchToProps = {
         onIncrease: gameAddedToCart,
         onDecrease: gameRemoveFromCart,
         onDelete: allGamesRemoveFromCart,
+        
     
 }
 export default connect(mapStateToProps, mapDispatchToProps)(CartListTable);

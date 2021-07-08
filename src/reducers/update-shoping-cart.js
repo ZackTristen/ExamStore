@@ -9,13 +9,16 @@ const updateShopingCart = (state, action) => {
 
     switch (action.type) {
         case 'GAME_ADDED_TO_CART':
+            
             return updateOrder(state, action.payload, 1)
 
         case 'GAME_REMOVED_FROM_CART':
+            
             return updateOrder(state, action.payload, -1)
 
 
         case 'ALL_GAMES_REMOVED_FROM_CART':
+            
             const item = state.shopingCart.cartItems.find((item) => item.id === action.payload)
             return updateOrder(state, action.payload, -item.count)
 

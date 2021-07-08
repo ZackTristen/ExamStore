@@ -18,7 +18,7 @@ class GameListItemContainer extends React.Component {
     }
     
     render() {
-        const { games, loading, error, onAddedToCart, } = this.props
+        const { games, loading, error, onAddedToCart } = this.props
 
         if (loading) {
             return <Spinner />

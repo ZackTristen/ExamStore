@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom'
-
 import App from './components/app/App';
 import ErrorBoundry from './components/error-boundary/error-boundary';
 import ServiceGame from './services/service'
@@ -16,7 +15,7 @@ ReactDOM.render(
     <Provider store={store}>
         <ErrorBoundry>
             <StoreServiceProvider value={serviceGame}>
-                <Router>
+                <Router >
                     <App />
                 </Router>
             </StoreServiceProvider>
