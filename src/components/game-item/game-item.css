@@ -1,10 +1,11 @@
 .game-item {
+    
     align-items: center;
     display: flex;
     flex-direction: column;
     width: 300px;
-    padding: 15px;
-    margin: 20px;
+    padding: 20px;
+    margin: 20px 15px 20px 15px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 15px;
     box-shadow: 0px 10px 20px 3px rgba(128, 92, 92, 0.582);
@@ -17,17 +18,25 @@
     transition-duration: 500ms;
 }
 
-.sinopsis, .game-title, .price, .studio, .picture {
+.game-title {
+    margin-top: 10px;
+}
+
+.game-title, .price, .studio  {
     padding: 10px;
 }
 
 .sinopsis {
-    padding: 20px;
+    margin-top: 25px;
+    margin-bottom: auto;
+    text-align: center;
+    padding: 10px;
 }
 .picture {
     width: 170px;
     height: 220px;
-    align-self: center;
+    margin-bottom: auto;
+
 }
 
 
@@ -42,16 +51,17 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:rgb(65, 37, 37);
     font-size: 15px;
-    
+    margin-top: 30px;
 }
 
 .add-to-cart:hover {
     transform: scale(1.05);
-    transition-duration: 300ms;
+    transition-duration: 500ms;
     box-shadow: 5px 10px 5px 0px rgba(184, 95, 37, 0.192);
 }
 
 .add-to-cart:active {
     transition-duration: 200ms;
-    border: 5px solid rgba(71, 96, 238, 0.685);
+    box-shadow: 0px 0px 10px 10px rgba(184, 95, 37, 0.192);
 }
+

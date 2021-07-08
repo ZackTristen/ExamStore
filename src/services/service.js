@@ -13,7 +13,7 @@ class ServiceGame {
         id: 2,
         name: "Nioh 2",
         price: 12,
-        sinopsis: "Nioh 2 — компьютерная игра в жанре Action/RPG, разработанная японской студией Team Ninja и издаваемая компаниями Koei Tecmo и Sony Interactive Entertainment для PlayStation 4. Выход игры состоялся 13 марта 2020 года",
+        sinopsis: "Nioh 2 — компьютерная игра в жанре Action/RPG, разработанная японской студией Team Ninja и издаваемая компаниями Koei Tecmo и Sony Interactive Entertainment для PlayStation 4. Выход игры состоялся 13 марта 2020 года.",
         studio: "Bandai Namco inc"
     },
     {

@@ -14,9 +14,9 @@ const CartListTable = ({ items, total, onIncrease, onDecrease, onDelete }) => {
                 <td>{price}$</td>
                 <td>{count}</td>
                 <td>
-                    <button onClick={() => onIncrease(id)}>+</button>
-                    <button onClick={() => onDecrease(id)}>-</button>
-                    <button onClick={() => onDelete(id)}>удалить все</button>
+                    <button  className='add-button' onClick={() => onIncrease(id)}>+</button>
+                    <button className='delete-button' onClick={() => onDecrease(id)}>-</button>
+                    <button className='all-delete-button' onClick={() => onDelete(id)}>удалить все</button>
                 </td>
             </tr>
         )
@@ -25,7 +25,7 @@ const CartListTable = ({ items, total, onIncrease, onDecrease, onDelete }) => {
     return (
         <div className="shoping-cart">
             <table>
-                <caption><h3>Корзина покупок</h3></caption>
+                <caption><h3 className ='title-cart'>Корзина покупок</h3></caption>
                 <thead>
                     <tr>
                         <th>#</th>
@@ -42,7 +42,7 @@ const CartListTable = ({ items, total, onIncrease, onDecrease, onDelete }) => {
                 </tbody>
 
             </table>
-            <span>{total}$</span>
+            <span classNam='total'>Total price: {total}$</span>
         </div>
     )
 
