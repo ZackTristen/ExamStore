@@ -42,7 +42,7 @@ const CartListTable = ({ items, total, onIncrease, onDecrease, onDelete }) => {
                 </tbody>
 
             </table>
-            <span classNam='total'>Total price: {total}$</span>
+            <span className='total'>Total price: {total}$</span>
         </div>
     )
 

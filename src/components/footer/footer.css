@@ -1,0 +1,13 @@
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.925);
+    color: rgb(238, 238, 238);
+}
+
+.footer {
+width: 300px;
+padding: 30px;
+margin: 20px;
+}

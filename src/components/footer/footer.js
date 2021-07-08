@@ -1,13 +1,18 @@
 import React from 'react';
+import './footer.css'
 
 const Footer = () => {
 
     return (
-        <div>
-            Store exam
-            <span>Все права защищены</span>
-            <span>+7 902 235 42 16</span>
-            <span>email FOREXAMPLE@MAIL.COM</span>
+        <div className='footer-container'>
+            <div className='footer'>
+            <h2>Store exam</h2>
+            <p>
+            Все права защищены 
+            +7 902 235 42 16 
+            EMAIL: FOREXAMPLE@MAIL.COM 
+            </p>
+            </div>
         </div>
     )
 
