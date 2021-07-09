@@ -52,11 +52,11 @@ return (
 }
 
 
-const mapStateToProps = ({gamesList: { games, loading, error}}) => {
+const mapStateToProps = ({gamesList: { games, loading, errorMessage }}) => {
     return {
         games,
         loading,
-        error
+        error: errorMessage
     }
 }
 

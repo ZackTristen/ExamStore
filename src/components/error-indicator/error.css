@@ -1,0 +1,7 @@
+.error {
+    font-family: 'Encode Sans SC', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(1, 115, 182);
+    text-shadow: 1px 1px 2px rgba(30, 69, 77, 0.76);
+}

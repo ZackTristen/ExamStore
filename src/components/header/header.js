@@ -18,7 +18,7 @@ const Header = () => {
                 
             </div>
             <div className='back-shop-link'>
-                <Link to='/' exact>
+                <Link to='/'>
                     <img src='https://image.flaticon.com/icons/png/512/889/889590.png' alt='cart' className='link' />
                     <span className='description-back'> Обратно в магазин</span>
                 </Link>
